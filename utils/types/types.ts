@@ -7,6 +7,10 @@ export type topic ={
 export type topicParam = {
   topicName: String
 }
+export type Header = {
+    topicName: String
+    topicId: Number    
+}
 export type response = {    
     id:number,
     title: String,

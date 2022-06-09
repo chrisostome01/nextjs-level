@@ -41,3 +41,17 @@ mutation lOGIN($email: String!  $password: String!){
   }
 }
 `;
+
+export const CREATENEWCARD = gql`
+mutation CREATECARD($title: String!, $description: String!, $topicId: Int!){
+  newCard(title: $title, description: $description, topicId: $topicId) {
+    id
+    title
+    description
+    topic {
+      id
+      topicName
+    }
+  }
+}
+`;

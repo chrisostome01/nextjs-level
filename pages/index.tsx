@@ -59,7 +59,7 @@ const Home: NextPage = () => {
         {/* ========== End: sideBar ============ */}
         {/* ========== Start: Middle content ========== */}
           <div className="lg:w-9/12 min-h-screen">
-            <Header topicName={topicName == "" ? "Pick a topic" : topicName}  /> 
+            <Header topicName={topicName == "" ? "Pick a topic" : topicName} topicId={activeTopic}  /> 
             <div className="content flex items-center justify-center h-full overflow-y-auto ">
               <RenderCards selectedCardIndex={selectedCardIndex} selectCard={selectCard} firstCard={firstCardIndex} lastCard={lastCardIndex} cardId={1} topicId={activeTopic} queryData={{ loading , error , activeCards }} />
             </div>           

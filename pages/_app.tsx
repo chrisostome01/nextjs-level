@@ -2,12 +2,8 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'next-themes'
 import { ApolloClient, InMemoryCache,ApolloProvider  } from "@apollo/client"
+import { client } from '../utils/functions/client'
 
-const client = new ApolloClient({
-  uri:"http://54.226.140.111:3000",
-  cache: new InMemoryCache()  
-
-})
 
 
 function MyApp({ Component, pageProps }: AppProps) {

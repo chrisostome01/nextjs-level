@@ -6,7 +6,7 @@ import Flippy, { FrontSide, BackSide } from 'react-flippy';
 
 const renderMyContent = (content = "" ) =>{
     let result = ""
-    for(let i =0; i < (Math.round(content.length / 2)) ; i++){
+    for(let i =0; i < (Math.round(content.length / 3)) ; i++){
         result += content[i]
     }
     return result;
@@ -22,14 +22,14 @@ export const Card = ({ title , content }) => {
                 <div className=" text-indigo-500 hover:text-indigo-500 font-bold text-lg 2xl:text-4xl">
                     { title }                  
                 </div>
-                <div className="text-gray-500 font-medium 2xl:text-2xl">
+                <div className="text-gray-500 font-medium 2xl:text-lg max-h-full overflow-y-auto overflow-ellipsis">
                     <p>
                         { renderMyContent(content) }...
                     </p>
                 </div>                
             </FrontSide>
             <BackSide className="card w-4/12 min-h-2/6 2xl:h-60 bg-gray-200 dark:bg-gray-800 rounded-md shadow-xl text-center p-3 mx-4  flex flex-col items-center justify-center">
-                <div className="text-gray-500 font-medium 2xl:text-2xl">
+                <div className="text-gray-500 font-medium 2xl:text-xl max-h-full overflow-y-auto">
                     <p>
                         { content }
                     </p>
